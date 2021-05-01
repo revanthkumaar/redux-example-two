@@ -1,6 +1,10 @@
 import { ReactComponent } from '*.svg';
 import React from 'react';
 
+
+import {connect} from 'react-redux'
+import * as bookActions from '../actions/bookActions'
+
 class Book extends React.Component{
 
     constructor(props){
@@ -8,7 +12,7 @@ class Book extends React.Component{
     }
 
     submitBook(input){
-        this.props.createBook(input);
+        this.props.createBook(input);// action gets triggered 
     }
 
 
